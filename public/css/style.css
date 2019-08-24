@@ -1,0 +1,134 @@
+/* Global */
+body{
+    font-family: 'Cairo', sans-serif;
+}
+ul{
+    list-style: none
+}
+.borderRound{
+    border-radius:50px;
+}
+.displayTableCell{
+    display: table-cell;
+}
+.pointer{
+    cursor: pointer;
+}
+.img{
+    border-radius: 50%;
+    width: 5%;
+}
+/*  */
+.mainList{
+    padding-left: 20px;
+}
+.mainList a{
+    text-decoration: none;
+}
+.logo{
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 60px;
+    padding: 10px;
+}
+.logo:hover{
+    background-color: #e5e5ff;
+}
+.bigBold{
+    font-size: 20px;
+    font-weight: bold;
+    display: -webkit-box;
+    color: #000;
+    margin: 10px;
+}
+.bigBold:hover{
+    color: #1da1f2;
+}
+.giveColour{
+    color: #1da1f2;
+}
+
+/* Post Box */
+.giveBorderLeftRight{
+    border-left: 1px solid #e6ecf0;
+    border-right: 1px solid #e6ecf0;
+}
+.PostBox{
+    border-bottom: 6px solid #e6ecf0;
+}
+.PostBox textarea{
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    background-color: transparent;
+    /* border-bottom: 1px solid #CCC; */
+}
+.myTextArea{
+    width: 100%;
+    font-size:18px;
+}
+.myBtn{
+    border-radius: 50px;
+}
+
+/* Card Global */
+
+.card .card-header{
+    border: none;
+    background-color: #FFF;
+    padding: 0 0 0 10px;
+}
+.card .card-header .img{
+    border-radius: 50%;
+    width: 10%;
+}
+.card .card-header .smallimg{
+    border-radius: 50%;
+    width: 5%;
+}
+
+.card a{
+    text-decoration: none;
+    color:#000;
+}
+
+
+/* Posts */
+.posts .card{
+    border: none;
+    border-bottom: 5px solid #e6ecf0;
+
+}
+.posts .card .card-header{
+    padding: 0 0 0 10px;
+}
+
+.posts .card .card-body{
+    padding: 0 0 0 75px;
+}
+
+/* UserProfile */
+.userprofile .card{
+    border:none;
+    border-bottom: 5px solid #e6ecf0;
+    border-top: 1px solid #e6ecf0;
+}
+
+.userprofile .card .card-header{
+    border-bottom: 1px solid #e6ecf0;
+    padding: 5px;
+}
+
+.userprofile .card .card-body{
+    padding: 0 0 0 30px;
+}
+
+/* Retweeted */
+.retweeted{
+    border: 1px solid #e6ecf0;
+    border-radius: 5px;
+}
