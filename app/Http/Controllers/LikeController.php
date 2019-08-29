@@ -11,13 +11,17 @@ class LikeController extends Controller
 {
     public function like(Post $post)
     {
-        if(!auth()->user()->iLikeThisPost($post)){
-            $post->user->notify(new AppLike(auth()->user()));
-            return $post->likes()->create([
-                'user_id' => auth()->user()->id
-            ])->fresh();
-        } else {
-            like::where('post_id', $post->id)->where('user_id', auth()->user()->id)->delete();
-        }
+        $post->user->notify(new AppLike(auth()->user()));
+
+        $post->likes()->create([
+            'user_id' => auth()->user()->id
+        ]);
+        // like::attach(auth()->user()->id, $post->id);
+
+    }
+
+    public function unlike(Post $post)
+    {
+        like::where('post_id', $post->id)->where('user_id', auth()->user()->id)->delete();
     }
 }

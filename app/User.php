@@ -73,10 +73,10 @@ class User extends Authenticatable
         }
     }
     
-    public function iLikeThisPost(Post $post)
-    {
-        return !!(like::where('post_id', $post->id)->where('user_id', $this->id)->first());
-    }
+    // public function iLikeThisPost(Post $post)
+    // {
+    //     return !!(like::where('post_id', $post->id)->where('user_id', $this->id)->first());
+    // }
 
     public function getMessages(User $user)
     {

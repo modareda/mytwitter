@@ -8,7 +8,7 @@ class Post extends Model
 {
     protected $with = ['user', 'likes', 'comments'];
     protected $fillable = ['user_id', 'body', 'image_url', 'post_id'];
-    protected $appends = ['likescount'];
+    protected $appends = ['likescount', 'isLiked'];
 
     public function user()
     {
@@ -28,5 +28,13 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class, 'post_id');
+    }
+    public function isLiked()
+    {
+        return $this->likes()->where('user_id',  auth()->user()->id)->count() > 0;
+    }
+    public function getisLikedAttribute()
+    {
+        return $this->isLiked();
     }
 }

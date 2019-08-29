@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth', 'web']],  function(){
     Route::post('/follow/{id}', 'FollowController@follow')->name('user.follow');
     Route::post('/unfollow/{id}', 'FollowController@unfollow')->name('user.unfollow');
     Route::post('/post/{post}/like', 'LikeController@like');
+    Route::delete('/post/{post}/like', 'LikeController@unlike');
     Route::post('/post/{post}/comment', 'CommentController@store');
     Route::get('/message', "MessageController@index")->name('messanger');
     Route::get('/message/{id}', "MessageController@show")->name('message');

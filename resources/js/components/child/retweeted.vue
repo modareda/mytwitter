@@ -6,13 +6,13 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <img src="/images/img_avatar3.png" class="img-fluid mr-2 smallimg" alt="Cinque Terre">
-                        <a :href="'/profile/'+retweeted.user_id">{{retweeted.user.name}} <span class="text-muted small">@{{retweeted.user.username}}</span></a> 
+                        <a :href="'/profile/'+user.id">{{user.name}} <span class="text-muted small">@{{user.username}}</span></a> 
                     </div>
                 </div>
             </div>
 
             <div class="card-body">
-                <p class="card-text text-break">{{retweeted.body}}</p>
+                <p class="card-text text-break">{{retweetedBody}}</p>
             </div>
         </div>
 
@@ -23,14 +23,16 @@ export default {
     props:['postId'],
     data(){
         return{
-            retweeted:{}
+            retweetedBody:'',
+            user:{}
         }
     },
     methods:{
         showthepost(){
             axios.post(`/post/${this.postId}`)
             .then(({data})=>{
-                this.retweeted = data
+                this.retweetedBody = data.body;
+                this.user = data.user
             });
         },
     },
