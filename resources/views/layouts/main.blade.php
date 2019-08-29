@@ -34,7 +34,7 @@
 						<a href="#" ><li class="bigBold giveColour logo"><i class="fab fa-twitter fa-2x"></i></li></a>
 						<a href="{{route('home')}}" class="bigBold"><li><i class="fas fa-home"></i>  <span class="pl-2">Home</span></li></a>
 						<a href="#" class="bigBold"><li><i class="fas fa-hashtag"></i> <span class="pl-2">Explore</span></li></a>
-						<a href="#" class="bigBold"><li><i class="far fa-bell"></i> <span class="pl-2">Notification</span></li></a>
+						<a href="#" class="bigBold"><li><i class="far fa-bell"></i> <span class="pl-2">Notification <div class="badge badge-danger">{{auth()->user()->unreadNotifications()->count()}}</div></span></li></a>
 						<a href="{{route('messanger')}}" class="bigBold"><li><i class="far fa-envelope"></i> <span class="pl-2">Messages</span></li></a>
 						<a href="{{route('profile', Auth::user()->id)}}" class="bigBold"><li><i class="fas fa-user"></i> <span class="pl-2">{{Auth::user()->username}}</span></li></a>
 						<a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="bigBold">

@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body" v-if="post.post_id == Null">
+            <div class="card-body" v-if="!post.post_id">
                 <p class="card-text text-break">{{post.body}}</p>
                 <div class="d-flex justify-content-start" style="margin-left: -50px;">
                     <like :me='user' :post="post" :postlikes="post.likes"></like>

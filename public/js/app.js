@@ -48012,7 +48012,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "a",
-                { attrs: { href: "/profile/" + _vm.retweeted.user.id } },
+                { attrs: { href: "/profile/" + _vm.retweeted.user_id } },
                 [
                   _vm._v(_vm._s(_vm.retweeted.user.name) + " "),
                   _c("span", { staticClass: "text-muted small" }, [
@@ -48329,7 +48329,7 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          post.post_id == _vm.Null
+          !post.post_id
             ? _c("div", { staticClass: "card-body" }, [
                 _c("p", { staticClass: "card-text text-break" }, [
                   _vm._v(_vm._s(post.body))

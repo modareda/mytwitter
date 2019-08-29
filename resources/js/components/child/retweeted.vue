@@ -6,7 +6,7 @@
                 <div class="d-flex justify-content-between">
                     <div>
                         <img src="/images/img_avatar3.png" class="img-fluid mr-2 smallimg" alt="Cinque Terre">
-                        <a :href="'/profile/'+retweeted.user.id">{{retweeted.user.name}} <span class="text-muted small">@{{retweeted.user.username}}</span></a> 
+                        <a :href="'/profile/'+retweeted.user_id">{{retweeted.user.name}} <span class="text-muted small">@{{retweeted.user.username}}</span></a> 
                     </div>
                 </div>
             </div>
